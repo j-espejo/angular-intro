@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Contador App';
   num: number = 10;
+
+  acct(value: number) {
+    this.num += value;
+  }
 }
