@@ -4,12 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: 'app.component.html',
 })
-export class AppComponent {
-  title: string = 'Contador App';
-  num: number = 10;
-  base: number = 5;
-
-  acct(value: number) {
-    this.num += value;
-  }
-}
+export class AppComponent {}
