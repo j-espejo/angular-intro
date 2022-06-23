@@ -4,4 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-list',
   templateUrl: './list.component.html',
 })
-export class ListComponent {}
+export class ListComponent {
+  heroes: string[] = [
+    'Spiderman',
+    'Ironman',
+    'Hulk',
+    'Thor',
+    'Captain America',
+  ];
+
+  heroDeleted: string = '';
+
+  deleteHero() {
+    this.heroDeleted = this.heroes.shift() || '';
+  }
+}
