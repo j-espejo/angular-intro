@@ -1,10 +1,15 @@
 <p>Listado de Héroes</p>
 
-<div *ngIf="heroDeleted">
+<div *ngIf="heroDeleted; else notDeleted">
   <h3>
     Héroe Borrado: <small>{{ heroDeleted }}</small>
   </h3>
 </div>
+
+<!-- referencia local -->
+<ng-template #notDeleted>
+  <h3>No ha borrado nada</h3>
+</ng-template>
 
 <button (click)="deleteHero()">Borrar</button>
 
