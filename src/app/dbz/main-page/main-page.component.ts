@@ -19,21 +19,7 @@ export class MainPageComponent {
   ];
 
   newCharacter: ICharacter = {
-    name: '',
-    power: 0,
+    name: 'Krillin',
+    power: 3000,
   };
-
-  addSubmit() {
-    if (this.newCharacter.name.trim().length === 0) {
-      return;
-    }
-    console.log(this.newCharacter);
-
-    //TODO: add characters
-    this.characters.push(this.newCharacter);
-    this.newCharacter = {
-      name: '',
-      power: 0,
-    };
-  }
 }
