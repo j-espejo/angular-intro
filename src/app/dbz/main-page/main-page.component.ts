@@ -22,4 +22,8 @@ export class MainPageComponent {
     name: 'Krillin',
     power: 3000,
   };
+
+  addNewCharacter(arg: ICharacter) {
+    this.characters.push(arg);
+  }
 }

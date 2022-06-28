@@ -7,6 +7,10 @@
   </div>
 
   <div class="col">
-    <app-add [characters]="characters" [newCharacter]="newCharacter"></app-add>
+    <!-- emitimos 'onNewCharacter' al padre main-page.components.ts -->
+    <app-add
+      [newCharacter]="newCharacter"
+      (onNewCharacter)="addNewCharacter($event)"
+    ></app-add>
   </div>
 </div>
