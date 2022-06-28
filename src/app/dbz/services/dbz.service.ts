@@ -18,11 +18,13 @@ export class DbzService {
 
   //Access Getter characters
   get getCharacters(): ICharacter[] {
-    //* rompemos la referencia con spread [...]
     return [...this._characters];
   }
 
-  constructor() {
-    console.log('Service initialized');
+  constructor() {}
+
+  //Add character service
+  addCharacter(character: ICharacter) {
+    this._characters.push(character);
   }
 }

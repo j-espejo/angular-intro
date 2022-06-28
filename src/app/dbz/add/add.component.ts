@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICharacter } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-add',
@@ -12,15 +13,14 @@ export class AddComponent {
     power: 0,
   };
 
-  //EventEmitter al componente Padre 'main-page.components.ts'
-  @Output() onNewCharacter: EventEmitter<ICharacter> = new EventEmitter();
+  constructor(private dbzService: DbzService) {}
 
   addSubmit() {
     if (this.newCharacter.name.trim().length === 0) {
       return;
     }
-    // Emitimos evento
-    this.onNewCharacter.emit(this.newCharacter);
+    // Service addCharacter
+    this.dbzService.addCharacter(this.newCharacter);
 
     this.newCharacter = {
       name: '',

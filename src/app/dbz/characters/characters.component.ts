@@ -7,9 +7,6 @@ import { DbzService } from '../services/dbz.service';
   templateUrl: './characters.component.html',
 })
 export class CharactersComponent {
-  // decorator properties, vienen desde el componente padre main-page
-  // @Input() characters: ICharacter[] = [];
-
   //Access DbzService getCharacters
   get characters(): ICharacter[] {
     return this.dbzService.getCharacters;
