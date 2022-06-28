@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ICharacter } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -26,4 +27,7 @@ export class MainPageComponent {
   addNewCharacter(arg: ICharacter) {
     this.characters.push(arg);
   }
+
+  // injection dependencies inicialization
+  constructor(private dbzService: DbzService) {}
 }
